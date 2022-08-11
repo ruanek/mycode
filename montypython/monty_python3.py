@@ -3,7 +3,7 @@
 round = 0
 answer = " "
 
-while round < 3 and answer != "brian" and answer != "shrubberry":
+while round < 3 and (answer != "brian" and answer != "shrubberry"):
     round += 1    
     answer = input('Finish the movie title, "Monty Python\'s The Life of ______": ')
     answer = answer.lower()
