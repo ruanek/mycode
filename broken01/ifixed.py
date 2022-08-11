@@ -18,11 +18,16 @@ while (calc1 != "q"):
         break
     calc2 = float(calc2)
     
-    print("Enter an operation to perform on the two operators (+ or -): ")
+    print("Enter an operation to perform on the two operators (+, -. *, or /): ")
     operation = input()
     if operation == "+":
         print("\n" + str(calc1) + " + " + str(calc2) + " = " + str(calc1 + calc2))
     elif operation == '-':
         print("\n" + str(calc1) + " - " + str(calc2) + " = " + str(calc1 - calc2))
+    elif operation == '*':
+        print("\n" + str(calc1) + " * " + str(calc2) + " = " + str(calc1 * calc2))   
+    elif operation == '/':
+        print("\n" + str(calc1) + " / " + str(calc2) + " = " + str(calc1 / calc2))
+
     else:
         print("\n Not a valid entry. Restarting...")
