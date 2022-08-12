@@ -3,11 +3,7 @@
 configfile = open("vlanconfig.cfg", "r")
 
 print(configfile.read())
-
-configfile.close()
-
-configfile = open("vlanconfig.cfg", "r")
-
+configfile.seek(0, 0)
 configlist = configfile.readlines()
 print(configlist)
 
