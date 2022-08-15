@@ -3,17 +3,27 @@
 import requests
 import xmltodict
 
-response = requests.get("https://boardgamegeek.com/xmlapi/search?search=horrified")
+usrinput = input("What game are you looking for?: ")
+response = requests.get(f"https://boardgamegeek.com/xmlapi/search?search={usrinput}")
 
 print(response.status_code)
 dict_data = xmltodict.parse(response.content)
-print(dict_data)
+game_dict = (dict_data["boardgames"]["boardgame"])
 
-for x in dict_data:
-    print(x[0[0]])
+for x in game_dict:
+    print(x["@objectid"])
+    print(x["name"])
 
+usrinput2 = input("Would you like to know more about any?: ")
+response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{usrinput2}")
 
+print(response.status_code)
+dict_data2 = xmltodict.parse(response.content)
+more_info = (dict_data2["boardgames"]["boardgame"])
 
+for x in more_info:
+    print(x["name"])
+    print(x["description"])
 
 # {'boardgames': 
 # {'@termsofuse': 'https://boardgamegeek.com/xmlapi/termsofuse', 'boardgame': 
