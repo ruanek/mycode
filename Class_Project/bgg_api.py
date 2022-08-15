@@ -11,11 +11,11 @@ dict_data = xmltodict.parse(response.content)
 game_dict = (dict_data["boardgames"]["boardgame"])
 
 for x in game_dict:
-    print(x["@objectid"])
-    if (x["name"] == "none"):
-        print(x["name"]["#text"])
+    print(x.get("@objectid"))
+    if type(x.get("name")) == str:
+        print(x.get("name"))
     else:
-        print(x["name"])
+        print((x.get("name")).get("#text"))
 
 usrinput2 = input("Would you like to know more about any?: ")
 response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{usrinput2}")
@@ -23,10 +23,13 @@ response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{usrinput2}
 print(response.status_code)
 dict_data2 = xmltodict.parse(response.content)
 more_info = (dict_data2["boardgames"]["boardgame"])
-
-for x in more_info:
-    print(x["name"])
-    print(x["description"])
+print(more_info.keys())
+# for x in more_info:
+#     if type(x.get("name")) == str:
+#         print(x.get("name"))
+#     else:
+#         print((x.get("name")).get("#text"))
+#     print(x.get("description"))
 
 # {'boardgames': 
 # {'@termsofuse': 'https://boardgamegeek.com/xmlapi/termsofuse', 'boardgame': 
