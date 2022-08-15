@@ -12,7 +12,10 @@ game_dict = (dict_data["boardgames"]["boardgame"])
 
 for x in game_dict:
     print(x["@objectid"])
-    print(x["name"])
+    if (x["name"] == "none"):
+        print(x["name"]["#text"])
+    else:
+        print(x["name"])
 
 usrinput2 = input("Would you like to know more about any?: ")
 response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{usrinput2}")
