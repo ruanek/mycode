@@ -2,38 +2,23 @@
 
 import pandas as pd
 
-import matplotlib
-matplotlib.use('Agg')
-
-import matplotlib.pyplot as plt
-
 def main():
-    excel_file = 'movies.xls'
+    ciscocsv = pd.read_csv("ciscodata.csv")
+    ciscojson = pd.read_json("ciscodata2.json")
 
-    movies_sheet1 = pd.read_excel(excel_file, sheet_name=0, index_col=0)
-    print(movies_sheet1.head())
+    # display first 5 entries of the ciscocsv dataframe
+    print(ciscocsv.head())
 
-    movies_sheet2 = pd.read_excel(excel_file, sheet_name=1, index_col=0)
-    print(movies_sheet2.head())
+    # display first 5 entries of the ciscojson dataframe            
+    print(ciscojson.head())
 
-    movies_sheet3 = pd.read_excel(excel_file, sheet_name=2, index_col=0)
-    print(movies_sheet3.head())
+    ciscodf = pd.concat([ciscocsv, ciscojson])
+    # uncomment the line below to "fix" the index issue
+    # ciscodf = pd.concat([ciscocsv, ciscojson], ignore_index=True, sort=False)
 
-    movies = pd.concat([movies_sheet1, movies_sheet2, movies_sheet3])
-
-    print(movies.shape)
-
-    movies.drop_duplicates(inplace=True)
-
-    print(movies.shape)
-
-    sorted_by_gross = movies.sort_values(["Gross Earnings"], ascending=False)
-
-    print(sorted_by_gross.head(10))
-
-    sorted_by_gross['Gross Earnings'].head(10).plot(kind="barh")
-    plt.savefig("/home/student/static/stackedbar.png", bbox_inches='tight')
+    print(ciscodf)
 
 if __name__ == "__main__":
     main()
+
 
