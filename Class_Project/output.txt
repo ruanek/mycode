@@ -10,4 +10,17 @@
      '@primary': 'true', 
      '@sortindex': '1', 
      '#text': 'Disney Villainous'}, 
-'description': "In Villainous, each player takes control of one of six Disney characters, each one a villain in a different Disney movie. Each player has their own villain deck, fate deck, player board, and 3D character.<br/><br/>On a turn, the active player moves their character to a different location on their player board, takes one or more of the actions visible on that space (often by playing cards from their hand), then refills their hand to four cards. Cards are allies, items, effects, conditions, and (for some characters) curses. You need to use your cards to fulfill your unique win condition.<br/><br/>One of the actions allows you to choose another player, draw two cards from that player's fate deck, then play one of them on that player's board, covering two of the four action spaces on one of that player's locations. The fate deck contains heroes, items, and effects from that villain's movie, and these cards allow other players to mess with that particular villain.<br/><br/>", 
+ 'description': "In Villainous, each player takes control of one of six Disney 
+    characters, each one a villain in a different Disney movie. Each player has 
+    their own villain deck, fate deck, player board, and 3D character.<br/><br/>
+    On a turn, the active player moves their character to a different location 
+    on their player board, takes one or more of the actions visible on that 
+    space (often by playing cards from their hand), then refills their hand to 
+    four cards. Cards are allies, items, effects, conditions, and (for some 
+    characters) curses. You need to use your cards to fulfill your unique win 
+    condition.<br/><br/>One of the actions allows you to choose another player, 
+    draw two cards from that player's fate deck, then play one of them on that 
+    player's board, covering two of the four action spaces on one of that 
+    player's locations. The fate deck contains heroes, items, and effects from 
+    that villain's movie, and these cards allow other players to mess with that 
+    particular villain.<br/><br/>", 

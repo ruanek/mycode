@@ -3,48 +3,44 @@
 import requests
 import xmltodict
 
-usrinput = input("What game are you looking for?: ")
-response = requests.get(f"https://boardgamegeek.com/xmlapi/search?search={usrinput}")
+game_list = {}
 
-print(response.status_code)
-dict_data = xmltodict.parse(response.content)
-game_dict = (dict_data["boardgames"]["boardgame"])
+def searchgame():
+    usrinput = input("What game are you looking for?: ")
+    response = requests.get(f"https://boardgamegeek.com/xmlapi/search?search={usrinput}")
+    print(response.status_code)
 
-for x in game_dict:
-    print(x.get("@objectid"))
-    if type(x.get("name")) == str:
-        print(x.get("name"))
-    else:
-        print((x.get("name")).get("#text"))
+    dict_data = xmltodict.parse(response.content)["boardgames"]["boardgame"]
+    
 
-usrinput2 = input("Would you like to know more about any?: ")
-response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{usrinput2}")
+    for game in dict_data:
+        id = (game.get("@objectid"))
+        if type(game.get("name")) == str:
+            name = (game.get("name"))
+        else:
+            name = ((game.get("name")).get("#text"))
+        game_list[id] = name
+        
+    for x in game_list:
+        print(f"{x}: Game: {game_list[x]}")
 
-print(response.status_code)
-dict_data2 = xmltodict.parse(response.content)
-more_info = (dict_data2["boardgames"]["boardgame"])
-print(more_info.keys())
-# for x in more_info:
-#     if type(x.get("name")) == str:
-#         print(x.get("name"))
-#     else:
-#         print((x.get("name")).get("#text"))
-#     print(x.get("description"))
+def specific_game():
+    usrinput2 = input("Would you like to know more about any?: ")
+    response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{usrinput2}")
+    print(response.status_code)
 
-# {'boardgames': 
-# {'@termsofuse': 'https://boardgamegeek.com/xmlapi/termsofuse', 'boardgame': 
-#     [{'@objectid': '282524', 
-#       'name': {
-#             '@primary': 'true', 
-#             '#text': 'Horrified'
-#             }, 
-#         'yearpublished': '2019'
-#         }, 
+    dict_data2 = xmltodict.parse(response.content)["boardgames"]["boardgame"]
 
-#     {'@objectid': '343562', 
-#     'name': {
-#         '@primary': 'true', 
-#         '#text': 'Horrified: American Monsters'
-#         }, 
-#     'yearpublished': '2021'
-#     }]}}
+    for game in dict_data2:
+        id2 = (game.get("@objectid"))
+        yr_pub = (game.get("yearpublished"))
+        description = (game.get("description")).replace("<br/>", "")
+        print(f"{game_list[id2]}({yr_pub}):\n{description}\n\n")
+
+def main():
+    print("Welcome to the gamefinder")
+
+    searchgame()
+    specific_game()
+
+main()
