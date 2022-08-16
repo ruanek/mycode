@@ -15,23 +15,33 @@ def searchgame():
     print(response.status_code)
 
     dict_data = xmltodict.parse(response.content)["boardgames"]["boardgame"]
-
+    c = 0
     for game in dict_data:
-        game_id = (game.get("@objectgame_id"))
+        game_id = (game.get("@objectid"))
         if type(game.get("name")) == str:
             name = (game.get("name"))
         else:
             name = ((game.get("name")).get("#text"))
         game_list[game_id] = name
     for game in game_list:
-        print(f"{game}: Game: {game_list[game]}")
+        c += 1
+        print(f"{c} - Game: {game_list[game]}")
 
 # function to search specific game details using id's
 def specific_game():
     """ enter something here """
 
     usrinput2 = input("Would you like to know more about any?: ")
-    response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{usrinput2}")
+    input_list = usrinput2.split()
+
+    keylist = list(game_list.keys())
+    for i, item in enumerate(input_list):
+            input_list[i] = keylist[(int(input_list[i]) - 1)]
+    print(input_list)
+
+    searchlist = ",".join(input_list)
+
+    response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{searchlist}")
     print(response.status_code)
 
     dict_data2 = xmltodict.parse(response.content)["boardgames"]["boardgame"]
