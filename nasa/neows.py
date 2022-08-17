@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import requests
 
+DATE = input("Choose a date in YYYY-MM-DD format: ")
 ## Define NEOW URL
-NEOURL = "https://api.nasa.gov/neo/rest/v1/feed?"
+NEOURL = "https://api.nasa.gov/neo/rest/v1/feed?date={DATE}&"
 
 # this function grabs our credentials
 # it is easily recycled from our previous script

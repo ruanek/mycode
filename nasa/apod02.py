@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 import requests
-
-NASAAPI = "https://api.nasa.gov/planetary/apod?"
+DATE = input("Choose a date in YYYY-MM-DD format: ")
+NASAAPI = f"https://api.nasa.gov/planetary/apod?date={DATE}&"
 
 # this function grabs our credentials
 def returncreds():
@@ -15,6 +15,7 @@ def returncreds():
 
 # this is our main function
 def main():
+    
     ## first grab credentials
     nasacreds = returncreds()
 
