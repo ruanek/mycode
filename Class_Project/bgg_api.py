@@ -5,13 +5,14 @@ import requests
 import xmltodict
 
 game_list = {}
+bgg_url =  "https://boardgamegeek.com/xmlapi"
 
 # function to call API with string seach
 def searchgame():
     """ enter something here """
 
     usrinput = input("What game are you looking for?: ")
-    response = requests.get(f"https://boardgamegeek.com/xmlapi/search?search={usrinput}")
+    response = requests.get(f"{bgg_url}/search?search={usrinput}")
     print(response.status_code)
 
     dict_data = xmltodict.parse(response.content)["boardgames"]["boardgame"]
@@ -41,7 +42,7 @@ def specific_game():
 
     searchlist = ",".join(input_list)
 
-    response = requests.get(f"https://boardgamegeek.com/xmlapi/boardgame/{searchlist}")
+    response = requests.get(f"{bgg_url}/boardgame/{searchlist}")
     print(response.status_code)
 
     dict_data2 = xmltodict.parse(response.content)["boardgames"]["boardgame"]
