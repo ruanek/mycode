@@ -12,32 +12,34 @@ bgg_url =  "https://boardgamegeek.com/xmlapi"
 def searchgame():
     """ enter something here """
 
-    usrinput = input("What game are you looking for?: ")
-    response = requests.get(f"{bgg_url}/search?search={usrinput}")
+    usrinput = input("What game are you looking for? Enter your search, or type 'q' to quit: ")
     
-
-    dict_data = xmltodict.parse(response.content)["boardgames"]["boardgame"]
-    counter = 0
-    for game in dict_data:
-        game_id = (game.get("@objectid"))
-        if isinstance(game.get("name"), str):
-            name = (game.get("name"))
-        else:
-            name = ((game.get("name")).get("#text"))
-        game_list[game_id] = name
-    for game in game_list:
-        counter += 1
-        pprint(f"{counter} - Game: {game_list[game]}")
+    if usrinput.lower() == "q":
+            print("Exiting...")
+    else:
+        response = requests.get(f"{bgg_url}/search?search={usrinput}")
+        dict_data = xmltodict.parse(response.content)["boardgames"]["boardgame"]
+        counter = 0
+        for game in dict_data:
+            game_id = (game.get("@objectid"))
+            if isinstance(game.get("name"), str):
+                name = (game.get("name"))
+            else:
+                name = ((game.get("name")).get("#text"))
+            game_list[game_id] = name
+        for game in game_list:
+            counter += 1
+            pprint(f"{counter} - Game: {game_list[game]}")
 
 # function to search specific game details using id's
 def search_specific_game():
     """ enter something here """
     
-    usrinput = input("Looking for more info? Enter the # of the game separated by a comma (i.e 1 or 1,2,3), or type 'exit' to quit: ")
+    usrinput = input("Looking for more info? Enter the # of the game separated by a comma (i.e 1 or 1,2,3), or type 'q' to quit: ")
     keylist = list(game_list.keys())
     searchlist = None
 
-    if usrinput == "exit":
+    if usrinput.lower() == "q":
         print("Exiting...")
     else:
         if usrinput.__contains__(","):
@@ -67,19 +69,26 @@ def main():
 
     print("Welcome to the gamefinder")
 
-    
     while True:
-        try:
-            searchgame()
+        while True:
+            try:
+                searchgame()
+                break
+            except:
+                print("Your Search did not return a response, Please try again")
+        
+        if len(game_list) > 0:
+            while True:
+                try:
+                    search_specific_game()
+                    break
+                except:
+                    print("Please select values within the list")
+                
+        check = input("Would you like to search again? Type 'y' to continue or any other key to exit: ")
+        if check.lower() == "y":
+            continue
+        else:
+            print("Exiting...")
             break
-        except:
-            print("Your Search did not return a response, Please try again")
-
-    while True:
-        try:
-            search_specific_game()
-            break
-        except:
-            print("Please select values within the list")
-
 main()
