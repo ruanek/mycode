@@ -1,26 +1,40 @@
-{'@objectid': '256382', 
- 'yearpublished': '2018', 
- 'minplayers': '2', 
- 'maxplayers': '6', 
- 'playingtime': '50', 
- 'minplaytime': '50', 
- 'maxplaytime': '50', 
- 'age': '10', 
- 'name': {
-     '@primary': 'true', 
-     '@sortindex': '1', 
-     '#text': 'Disney Villainous'}, 
- 'description': "In Villainous, each player takes control of one of six Disney 
-    characters, each one a villain in a different Disney movie. Each player has 
-    their own villain deck, fate deck, player board, and 3D character.<br/><br/>
-    On a turn, the active player moves their character to a different location 
-    on their player board, takes one or more of the actions visible on that 
-    space (often by playing cards from their hand), then refills their hand to 
-    four cards. Cards are allies, items, effects, conditions, and (for some 
-    characters) curses. You need to use your cards to fulfill your unique win 
-    condition.<br/><br/>One of the actions allows you to choose another player, 
-    draw two cards from that player's fate deck, then play one of them on that 
-    player's board, covering two of the four action spaces on one of that 
-    player's locations. The fate deck contains heroes, items, and effects from 
-    that villain's movie, and these cards allow other players to mess with that 
-    particular villain.<br/><br/>", 
+{'@objectid': '282524', 
+'yearpublished': '2019', 
+'minplayers': '1', 
+'maxplayers': '5', 
+'playingtime': '60', 
+'minplaytime': '60', 
+'maxplaytime': '60', 
+'age': '10', 
+'name': {'@primary': 'true', '@sortindex': '1', '#text': 'Horrified'}, 
+'description': "The stakes have been raised. Imagine living in a place so
+wretched that it's not plagued by one, two, or even three monsters &mdash; 
+but seven of the most horrifying fiends!<br/><br/>In this game, you'll come 
+face to face with them all as you work together to rid the town of the maniacal
+ or misunderstood creatures&hellip;before it's too late.<br/><br/>Horrified 
+ includes high-quality sculpted miniatures (Frankenstein, The Bride of 
+ Frankenstein, The Wolf Man, Dracula, The Mummy, The Invisible Man, Creature 
+ from the Black Lagoon). Its innovative, easy-to-learn, cooperative gameplay 
+ has players working together against the monsters with varying levels of 
+ difficulty. Just as each monster is unique, they require different strategies 
+ and tactics to be defeated.<br/><br/>&mdash;description from the publisher
+ <br/><br/>", 
+ 'thumbnail': 'https://cf.geekdo-images.com/SoClIcwjDo_iZs0idVikDw__thumb/img/YSf5Z99aBqAlNKaGBj_oGb1oKH4=/fit-in/200x150/filters:strip_icc()/pic4848330.jpg', 'image': 'https://cf.geekdo-images.com/SoClIcwjDo_iZs0idVikDw__original/img/TEprFkOM3G_u2HnUvh05WITeXbg=/0x0/filters:format(jpeg)/pic4848330.jpg', 
+ 'boardgamepublisher': {'@objectid': '34', '#text': 'Ravensburger'}, 
+ 'boardgamepodcastepisode': [{'@objectid': '419380', '#text': '#38 - Spooky Games'}, {'@objectid': '390248', '#text': '1P 202 - Horrified'}, {'@objectid': '325098', '#text': 'Black Friday Bonus Episode'}, {'@objectid': '329723', '#text': 'Board Game Buffet: Episode 58- Horrified; Cthulhu: Death May Die'}, {'@objectid': '325216', '#text': 'Board Game Kiki Episode 7: Holiday Gift Guide'}, {'@objectid': '380492', '#text': 'Episode 10 - Paladins of the West Kingdom'}, {'@objectid': '318448', '#text': 'Episode 113 :: Abomination Board Game Review'}, {'@objectid': '388295', '#text': 'Episode 127 - Savor the Flavor'}, {'@objectid': '351055', '#text': 'Episode 127 :: Best Boardgames of 2019'}, {'@objectid': '401912', '#text': 'Episode 133 - Togetherness'}, {'@objectid': '313978', '#text': 'Episode 156: Horrified'}, {'@objectid': '380594', '#text': 'Episode 157 - Reviews including Bonfire, Paris and more'}, {'@objectid': '430774', '#text': 'Episode 170 - Top 10 Overrated Games'}, {'@objectid': '432442', '#text': 'Episode 173: Special Guest – Tom Vasel! Plus Horrified, Black Sonata, Ark Nova and Bristol 1350'}, {'@objectid': '367222', '#text': 'Episode 181: Greenville 1989'}, {'@objectid': '375483', '#text': 'Episode 29 - 2020 Year-End Wrap-Up'}, {'@objectid': '381698', '#text': 'Episode 31 - Good Tie-In Games, Part 1'}, {'@objectid': '380875', '#text': 'Episode 72: A War of Whispers, Dice Forge, Raiders of the North Sea'}, {'@objectid': '367469', '#text': 'Episode 97: Spirit Island, CTRL, Horrified, ShipShape, Merlin'}, {'@objectid': '334423', '#text': 'Episode 98 - The 2019 Blitzies'}, {'@objectid': '350733', '#text': 'HLG 90: Spellenbeurzen in Corona-tijd'}, {'@objectid': '322200', '#text': 'Horrified'}, {'@objectid': '349610', '#text': 'Horrified and Funkoverse'}, {'@objectid': '315651', '#text': 'Horrified and Universal Monster Movies'}, {'@objectid': '411860', '#text': 'Horrified, Lamaland en Viscounts of the West Kingdom'}, {'@objectid': '305325', '#text': 'MeepleCore Podcast Episode 80 - Gencon 2019 recap, Metal Gear Solid board game, God of War card game, and more!'}, {'@objectid': '312091', '#text': 'MeepleCore Podcast Episode 83 - Cartographers, Managing a game collection, Top 5 games with gimmicks, and more!'}, {'@objectid': '306098', '#text': 'Out of the Dust Ep49 - NMBR 9, Horrified, and Symphony No9'}, {'@objectid': '414757', '#text': 'RA episode 069 Paw People'}, {'@objectid': '416716', '#text': "S.2 Episode 6 - Top 3 We'll Never Play Again!"}, {'@objectid': '330485', '#text': 'The Dice Men Cometh – Episode 291'}, {'@objectid': '326242', '#text': 'The Game Pit: Episode 142 - Pit Spit'}], 'boardgamehonor': [{'@objectid': '60666', '#text': '2019 Cardboard Republic Immersionist Laurel Nominee'}, {'@objectid': '61429', '#text': '2019 Golden Geek Best Cooperative Game Nominee'}, {'@objectid': '61437', '#text': '2019 Golden Geek Best Family Board Game Nominee'}, {'@objectid': '61435', '#text': '2019 Golden Geek Best Thematic Board Game Nominee'}], 'boardgamemechanic': [{'@objectid': '2001', '#text': 'Action Points'}, {'@objectid': '2023', '#text': 'Cooperative Game'}, {'@objectid': '2072', '#text': 'Dice Rolling'}, {'@objectid': '2007', '#text': 'Pick-up and Deliver'}, {'@objectid': '2078', '#text': 'Point to Point Movement'}, {'@objectid': '2819', '#text': 'Solo / Solitaire Game'}, {'@objectid': '2015', '#text': 'Variable Player Powers'}, {'@objectid': '2897', '#text': 'Variable Set-up'}], 'boardgamefamily': [{'@objectid': '22783', '#text': 'Admin: Better Description Needed!'}, {'@objectid': '53514', '#text': 'Books: Dracula'}, {'@objectid': '76556', '#text': 'Books: The Invisible Man'}, {'@objectid': '20733', '#text': 'Characters: Frankenstein'}, {'@objectid': '25158', '#text': 'Components: Miniatures'}, {'@objectid': '66335', '#text': 'Components: Standees'}, {'@objectid': '5615', '#text': 'Creatures: Monsters'}, {'@objectid': '62254', '#text': 'Creatures: Werewolves'}, {'@objectid': '62042', '#text': 'Movies: Horror Movies'}, {'@objectid': '28554', '#text': 'Movies: Universal Studios Monsters'}, {'@objectid': '5666', '#text': 'Players: Games with Solitaire Rules'}, {'@objectid': '71573', '#text': 'Theme: Retro'}], 'boardgameversion': [{'@objectid': '460988', '#text': 'English edition'}, {'@objectid': '602218', '#text': 'Polish edition'}], 'boardgamesubdomain': [{'@objectid': '5499', '#text': 'Family Games'}, {'@objectid': '5496', '#text': 'Thematic Games'}], 'boardgamedesigner': {'@objectid': '102313', '#text': 'Prospero Hall'}, 'boardgameartist': {'@objectid': '102313', '#text': 'Prospero Hall'}, 'boardgameimplementation': {'@objectid': '343562', '#text': 'Horrified: American Monsters'}, 'boardgameaccessory': {'@objectid': '286027', '#text': 'Horrified: Invisible Man Clear Plastic Promo'}, 'boardgamecategory': [{'@objectid': '1024', '#text': 'Horror'}, {'@objectid': '1047', '#text': 'Miniatures'}, {'@objectid': '1064', '#text': 'Movies / TV / Radio theme'}], 'poll': [{'@name': 'suggested_numplayers', '@title': 'User Suggested Number of Players', '@totalvotes': '161', 'results': [{'@numplayers': '1', 'result': [{'@value': 'Best', '@numvotes': '13'}, {'@value': 'Recommended', '@numvotes': '74'}, {'@value': 'Not Recommended', '@numvotes': '26'}]}, {'@numplayers': '2', 'result': [{'@value': 'Best', '@numvotes': '44'}, {'@value': 'Recommended', '@numvotes': '76'}, {'@value': 'Not Recommended', '@numvotes': '3'}]}, {'@numplayers': '3', 'result': [{'@value': 'Best', '@numvotes': '93'}, {'@value': 'Recommended', '@numvotes': '34'}, {'@value': 'Not Recommended', '@numvotes': '0'}]}, {'@numplayers': '4', 'result': [{'@value': 'Best', '@numvotes': '36'}, {'@value': 'Recommended', '@numvotes': '70'}, {'@value': 'Not Recommended', '@numvotes': '4'}]}, {'@numplayers': '5', 'result': [{'@value': 'Best', '@numvotes': '7'}, {'@value': 'Recommended', '@numvotes': '52'}, {'@value': 'Not Recommended', '@numvotes': '41'}]}, {'@numplayers': '5+', 'result': [{'@value': 'Best', '@numvotes': '0'}, {'@value': 'Recommended', '@numvotes': '0'}, {'@value': 'Not Recommended', '@numvotes': '79'}]}]}, {'@name': 'language_dependence', '@title': 'Language Dependence', '@totalvotes': '15', 'results': {'result': [{'@level': '1', '@value': 'No necessary in-game text', '@numvotes': '0'}, {'@level': '2', '@value': 'Some necessary text - easily memorized or small crib sheet', '@numvotes': '6'}, {'@level': '3', '@value': 'Moderate in-game text - needs crib sheet or paste ups', '@numvotes': '9'}, {'@level': '4', '@value': 'Extensive use of text - massive conversion needed to be playable', '@numvotes': '0'}, {'@level': '5', '@value': 'Unplayable in another language', '@numvotes': '0'}]}}, {'@name': 'suggested_playerage', '@title': 'User Suggested Player Age', '@totalvotes': '52', 'results': {'result': [{'@value': '2', '@numvotes': '0'}, {'@value': '3', '@numvotes': '0'}, {'@value': '4', '@numvotes': '0'}, {'@value': '5', '@numvotes': '0'}, {'@value': '6', '@numvotes': '9'}, {'@value': '8', '@numvotes': '23'}, {'@value': '10', '@numvotes': '15'}, {'@value': '12', '@numvotes': '1'}, {'@value': '14', '@numvotes': '4'}, {'@value': '16', '@numvotes': '0'}, {'@value': '18', '@numvotes': '0'}, {'@value': '21 and up', '@numvotes': '0'}]}}], 
+ 'statistics': 
+   {'@page': '1', 'ratings': 
+     {'usersrated': '11684', 'average': '7.73945', 'bayesaverage': '7.3714', 'ranks': 
+     {'rank': 
+       [{'@type': 'subtype', '@id': '1', '@name': 'boardgame', '@friendlyname': 'Board Game Rank', '@value': '161', '@bayesaverage': '7.3714'}, 
+        {'@type': 'family', '@id': '5496', '@name': 'thematic', '@friendlyname': 'Thematic Rank', '@value': '41', '@bayesaverage': '7.4278'}, 
+        {'@type': 'family', '@id': '5499', '@name': 'familygames', '@friendlyname': 'Family Game Rank', '@value': '24', '@bayesaverage': '7.42868'}
+         ]}, 
+      'stddev': '1.12414', 
+      'median': '0', 
+      'owned': '23959', 
+      'trading': '301', 
+      'wanting': '446', 
+      'wishing': '4399', 
+      'numcomments': '1982', 
+ 'numweights': '249', 'averageweight': '2.0442'}}}
