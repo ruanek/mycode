@@ -51,7 +51,7 @@ def search_specific_game():
             input_list = usrinput
             searchlist = str(keylist[(int(input_list) - 1)])
             
-        response = requests.get(f"{bgg_url}/boardgame/{searchlist}")
+        response = requests.get(f"{bgg_url}/boardgame/{searchlist}?stats=1")
         
         boardgame = xmltodict.parse(response.content)["boardgames"]["boardgame"]
         
