@@ -15,17 +15,17 @@ game_list = {}
 BGG_URL =  "https://boardgamegeek.com/xmlapi"
 
 # function to call API with string search
-def searchgame():
+def search_game():
     """ Uses the BGG XML API to Search for games by name and by AKAs """
     # requesting user input
-    usrinput = input("\nWhat game are you looking for? Enter your search, or type 'q' to quit: ")
+    user_input = input("\nWhat game are you looking for? Enter your search, or type 'q' to quit: ")
 
     # conditional to allow user to escape this function
-    if usrinput.lower() == "q":
+    if user_input.lower() == "q":
         print("Skipping...")
     else:
-        # combining the url and usrinput to make the api call
-        response = requests.get(f"{BGG_URL}/search?search={usrinput}")
+        # combining the url and user_input to make the api call
+        response = requests.get(f"{BGG_URL}/search?search={user_input}")
         # using xmltodict to convert the xml response from the api to a dictionary
         game_dict = xmltodict.parse(response.content)["boardgames"]["boardgame"]
         counter = 0
@@ -47,14 +47,14 @@ def searchgame():
             print(f"{counter} - Game: {game_list[game]}")
 
 # helper function for search_specific game and possibly send to csv
-def input_handler(usrinput):
+def input_handler(user_input):
     """ Used to output searchlist in a string with values the api can understand """
     # defining variables to be used throughout the function
     keylist = list(game_list.keys())
         # conditional to handle single or multiple user input seperated by a comma
-    if "," in usrinput:
+    if "," in user_input:
         # converting a string to a list using .split()
-        input_list = usrinput.split(",")
+        input_list = user_input.split(",")
         # iterating through input_list
         for i, item in enumerate(input_list):
             # re-assigning "user friendly" value in input list to game id used by the api
@@ -62,7 +62,7 @@ def input_handler(usrinput):
         # converting list to string seperated by commas
         searchlist = ",".join(input_list)
     else:
-        input_list = usrinput
+        input_list = user_input
         # converting list to string seperated by commas and,
         # re-assigning "user friendly" value in input list to game id used by the api
         searchlist = str(keylist[(int(input_list) - 1)])
@@ -73,13 +73,13 @@ def input_handler(usrinput):
 def search_specific_game():
     """ Uses the BGG XML API to Retrieve information about a particular game or games """
     # requesting user input
-    usrinput = input("\nLooking for more info?\nEnter the # of the game separated by a comma" \
+    user_input = input("\nLooking for more info?\nEnter the # of the game separated by a comma" \
         " (i.e 1 or 1,2,3), or type 'q' to quit: ")
     # conditional to allow user to escape this function or continue
-    if usrinput.lower() == "q":
+    if user_input.lower() == "q":
         print("Skipping...")
     else:
-        search_list = input_handler(usrinput)
+        search_list = input_handler(user_input)
         # combining the url and searchlist to make the api call
         response = requests.get(f"{BGG_URL}/boardgame/{search_list}?stats=1")
 
@@ -127,13 +127,13 @@ def send_to_csv():
             }
 
     # requesting user input
-    usrinput = input("\nWould you like to export game information to a csv file?\nEnter the #" \
+    user_input = input("\nWould you like to export game information to a csv file?\nEnter the #" \
         " of the game separated by a comma (i.e 1 or 1,2,3), or type 'q' to quit: ")
     # conditional to allow user to escape this function or continue
-    if usrinput.lower() == "q":
+    if user_input.lower() == "q":
         print("Skipping...")
     else:
-        search_list = input_handler(usrinput)
+        search_list = input_handler(user_input)
         # combining the url and searchlist to make the api call
         response = requests.get(f"{BGG_URL}/boardgame/{search_list}?stats=1")
 
@@ -168,10 +168,11 @@ def main():
 
     # loop to allow user to navigate through the prompts
     while True:
-        # loop through the search_game function
+        # loop through the search_game function if the api call returns no repsonse
+        # or hits the exept it will prompt the user to try the search again
         while True:
             try:
-                searchgame()
+                search_game()
                 break
             except: # pylint: disable=bare-except
                 print("Your Search did not return a response, Please try again!")
@@ -179,7 +180,8 @@ def main():
         # conditional to check if game_list was populated since the user can
         # quit out of the first function they would have no options to choose from here
         if len(game_list) > 0:
-            # loop through the search_specific_game function
+            # loop through the search_specific_game function if the input value is outside
+            # of the game_list it will prompt the user to select a valid option
             while True:
                 try:
                     search_specific_game()
@@ -190,7 +192,8 @@ def main():
         # conditional to check if game_list was populated since the user can
         # quit out of the first function they would have no options to choose from here
         if len(game_list) > 0:
-        # loop through the search_specific_game function
+            # loop through the search_specific_game function if the input value is outside
+            # of the game_list it will prompt the user to select a valid option
             while True:
                 try:
                     send_to_csv()
