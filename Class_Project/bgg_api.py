@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-""" Python program allowing the user to search for games
-request more information and export selected
+""" Python program leverages the boardgame geek xmlapi
+https://boardgamegeek.com/wiki/page/BGG_XML_API&redirectedfrom=XML_API#
+to allow the user to search for games,
+request more information, and export selected
 game data to a csv file || Author: Kyle Ruane """
 
 # importing requests for api calls
@@ -98,7 +100,7 @@ def search_specific_game():
             comp_rating = (game["statistics"]["ratings"].get("averageweight"))[:3]
             user_rating = (game["statistics"]["ratings"].get("average"))[:3]
             print(f"\nName: {game_list[game_id2]}({yr_pub}):\nComplexity Rating: {comp_rating}/5\
-                \nUser Rating: {user_rating}/10 \nDescription:\n{description}\n\n")
+                \nUser Rating: {user_rating}/10 \nDescription:\n{description}\n")
 
 # function to search specific game details using id's
 def send_to_csv():
@@ -164,7 +166,7 @@ def send_to_csv():
 def main():
     """called at runtime"""
 
-    print("Welcome to the gamefinder (Powered by the BoardGameGeek API)")
+    print("\n\033[2mWelcome to gamefinder (Powered by the BoardGameGeek API)\033[0m")
 
     # loop to allow user to navigate through the prompts
     while True:
@@ -175,7 +177,7 @@ def main():
                 search_game()
                 break
             except: # pylint: disable=bare-except
-                print("Your Search did not return a response, Please try again!")
+                print("Your search did not return a response, Please try again!")
 
         # conditional to check if game_list was populated since the user can
         # quit out of the first function they would have no options to choose from here
@@ -187,7 +189,7 @@ def main():
                     search_specific_game()
                     break
                 except: # pylint: disable=bare-except
-                    print("Please select values within the list!")
+                    print("Please select a value or values within the list!")
 
         # conditional to check if game_list was populated since the user can
         # quit out of the first function they would have no options to choose from here
@@ -199,7 +201,7 @@ def main():
                     send_to_csv()
                     break
                 except: # pylint: disable=bare-except
-                    print("Please select values within the list!")
+                    print("Please select a value or values within the list!")
 
         # prompting user if they would like to start a new search
         check = input("\nWould you like to search again? Type 'y' to continue" \
