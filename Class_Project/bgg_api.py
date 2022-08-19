@@ -216,7 +216,7 @@ def main():
                     game_list.clear()
             continue
 
-        print("\nExiting...Hava a nice day!")
+        print("\nExiting...Have a nice day!")
         break
 if __name__ == "__main__":
     main()
